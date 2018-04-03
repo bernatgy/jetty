@@ -1,9 +1,9 @@
-﻿<Application x:Class="Jetty.App"
+﻿<Application
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Jetty"
-             StartupUri="MainWindow.xaml">
+             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Jetty.App"
+             StartupUri="MainWnd.xaml">
     <Application.Resources>
-         
     </Application.Resources>
 </Application>

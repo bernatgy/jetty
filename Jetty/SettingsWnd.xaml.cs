@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Jetty
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SettingsWnd.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SettingsWnd : Window
     {
-        public MainWindow()
+        public SettingsWnd()
         {
             InitializeComponent();
         }

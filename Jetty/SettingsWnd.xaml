@@ -1,0 +1,31 @@
+﻿<Window x:Class="Jetty.SettingsWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jetty"
+        xmlns:properties="clr-namespace:Jetty.Properties"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Layout">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Horizontal" >
+                        <Label Content="Icon Size"/>
+                        <Slider Maximum="100" Minimum="30" VerticalAlignment="Center" Width="200" Value="{Binding Source={x:Static properties:Settings.Default}, Path=IconSize}" />
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Horizontal" >
+                        <Label Content="Space Between"/>
+                        <Slider Maximum="20" Minimum="-20" VerticalAlignment="Center" Width="200" Value="{Binding Source={x:Static properties:Settings.Default}, Path=IconMargin}" />
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Misc">
+                <Grid />
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+
+</Window>
