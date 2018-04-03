@@ -6,8 +6,8 @@ namespace Jetty
     {
         public string ExecutablePath { get; set; }
 
-        public AppLauncherWidget(Bitmap icon)
-            : base(icon)
+        public AppLauncherWidget(string title, Bitmap icon)
+            : base(title, icon)
         {
         }
 

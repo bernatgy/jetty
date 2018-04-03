@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="src\AppLauncherWidget.cs" />
     <Compile Include="src\AppStore.cs" />
+    <Compile Include="src\CenterToolTipConverter.cs" />
     <Compile Include="src\Effects\BloomEffect.cs" />
     <Compile Include="src\TestAppStore.cs" />
     <Compile Include="src\Utils.cs" />

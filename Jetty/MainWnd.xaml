@@ -11,6 +11,51 @@
         Background="Transparent"
         Topmost="True"
         Title="Jetty">
+    <Window.Resources>
+        <local:CenterToolTipConverter x:Key="ToolTipConverter" />
+        <Style TargetType="{x:Type ToolTip}">
+            <Setter Property="Height" Value="20" />
+            <Setter Property="HasDropShadow" Value="False" />
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="HorizontalOffset">
+                <Setter.Value>
+                    <MultiBinding Converter="{StaticResource ToolTipConverter}">
+                        <Binding RelativeSource="{RelativeSource Self}" Path="PlacementTarget.ActualWidth"/>
+                        <Binding RelativeSource="{RelativeSource Self}" Path="ActualWidth"/>
+                    </MultiBinding>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToolTip}">
+                        <Border x:Name="Root" Padding="20,0,20,0" BorderBrush="Transparent" BorderThickness="0" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" CornerRadius="5">
+                            <Border.Background>
+                                <!--<LinearGradientBrush 
+                                    StartPoint="0,0"
+                                    EndPoint="0,1">
+                                    <GradientStop 
+                                        Color="Snow" 
+                                        Offset="0.0"/>
+                                    <GradientStop 
+                                        Color="Gainsboro" 
+                                        Offset="1.0"/>
+                                </LinearGradientBrush>-->
+                                <SolidColorBrush Color="Black" Opacity=".5" />
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsOpen" Value="False">
+                                <Setter TargetName="Root" Property="Visibility" Value="Collapsed" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <StackPanel x:Name="widgetContainer" Orientation="Horizontal" HorizontalAlignment="Center">
         <StackPanel.ContextMenu>
             <ContextMenu>

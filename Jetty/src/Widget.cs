@@ -10,8 +10,9 @@ namespace Jetty
         public ContextMenu Menu { get; private set; }
         public int ActiveInstanceCount { get; protected set; } = 0;
 
-        public Widget(Bitmap icon)
+        public Widget(string title, Bitmap icon)
         {
+            this.Title = title;
             this.Icon = icon;
         }
 

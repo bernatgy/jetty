@@ -44,6 +44,20 @@ namespace Jetty
                     Margin = new Thickness(margin, 0, margin, 0)
                 };
 
+                var tt = new ToolTip()
+                {
+                    VerticalContentAlignment = VerticalAlignment.Center,
+                    HorizontalContentAlignment = HorizontalAlignment.Center,
+                    Placement = System.Windows.Controls.Primitives.PlacementMode.Relative,
+                    PlacementTarget = image,
+                    Content = w.Title,
+                    VerticalOffset = -25,
+                    Height = 20,
+                    BorderThickness = new Thickness(0)
+                };
+
+                image.ToolTip = tt;
+
                 // Set the render quality to be the best available.
                 RenderOptions.SetBitmapScalingMode(image, BitmapScalingMode.Fant);
 
@@ -93,7 +107,7 @@ namespace Jetty
 
         private void SettingChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            switch(e.PropertyName)
+            switch (e.PropertyName)
             {
                 case "IconSize":
                     this.UpdateDockSize();
