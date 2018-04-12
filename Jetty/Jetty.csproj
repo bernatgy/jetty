@@ -69,9 +69,22 @@
     <Compile Include="src\AppStore.cs" />
     <Compile Include="src\CenterToolTipConverter.cs" />
     <Compile Include="src\Effects\BloomEffect.cs" />
+    <Compile Include="src\Events\SystemInputEvent.cs" />
+    <Compile Include="src\Events\SystemKeyboardEvent.cs" />
+    <Compile Include="src\Events\SystemMouseEvent.cs" />
+    <Compile Include="src\Events\WidgetActionEvent.cs" />
+    <Compile Include="src\Exceptions\InvalidWidgetException.cs" />
+    <Compile Include="src\ILogger.cs" />
+    <Compile Include="src\ISysHandler.cs" />
+    <Compile Include="src\ShellWnd.cs" />
+    <Compile Include="src\VSOutputLogger.cs" />
+    <Compile Include="src\Win32SysHandler.cs" />
     <Compile Include="src\TestAppStore.cs" />
     <Compile Include="src\Utils.cs" />
     <Compile Include="src\Widget.cs" />
+    <Compile Include="src\Win\Dwmapi.cs" />
+    <Compile Include="src\Win\Kernel32.cs" />
+    <Compile Include="src\Win\User32.cs" />
     <Page Include="AboutWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +142,15 @@
       <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>

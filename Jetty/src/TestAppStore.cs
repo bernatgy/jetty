@@ -8,9 +8,9 @@ namespace Jetty
 
         public TestAppStore()
         {
-            this._launchers.Add(new AppLauncherWidget("Mozilla Firefoxxxxxxxxxxxx", Properties.Resources.HP_Firefox_icon));
-            this._launchers.Add(new AppLauncherWidget("Mozilla Firefsasssssox", Properties.Resources.HP_Firefox_icon));
-            this._launchers.Add(new AppLauncherWidget("Mozilla Firefsox", Properties.Resources.HP_Firefox_icon));
+            this._launchers.Add(new AppLauncherWidget("Mozilla Firefox", Properties.Resources.HP_Firefox_icon, @"C:\Program Files\Mozilla Firefox\firefox.exe"));
+            this._launchers.Add(new AppLauncherWidget("Mozilla Firefoxx", Properties.Resources.HP_Firefox_icon, @"C:\Program Files\Mozilla Firefox\firefox.exe"));
+            this._launchers.Add(new AppLauncherWidget("Mozilla Firefoxxx", Properties.Resources.HP_Firefox_icon, @"C:\Program Files\Mozilla Firefox\firefox.exe"));
         }
 
         public override void Add(Widget item)

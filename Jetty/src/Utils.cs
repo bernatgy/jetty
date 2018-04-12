@@ -2,20 +2,23 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Reflection;
-using System.Windows;
-using System.Windows.Interop;
+using System.Runtime.InteropServices;
 using System.Windows.Media.Imaging;
+
+using static Jetty.Win.Dwmapi;
 
 namespace Jetty
 {
+    public enum WidgetActionType
+    {
+        Activated,
+        Deactivated
+    }
+
     public static class Utils
     {
         public static string HomePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        public static extern bool DeleteObject(IntPtr hObject);
-
+        
         public static Bitmap BitmapImage2Bitmap(BitmapImage bitmapImage)
         {
             using (MemoryStream outStream = new MemoryStream())
